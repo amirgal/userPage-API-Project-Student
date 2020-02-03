@@ -43,6 +43,13 @@ class Renderer {
         $('.meat-container').append(newHTML);
     }
 
+    renderDropDownMenu(userData) {
+        const source = $('#dropDown-template').html()
+        const template = Handlebars.compile(source)
+        const newHTML = template(userData);
+        $('#drop-down').append(newHTML);
+    }
+
     renderPage(data) {
         this.renderUser(data.mainUser)
         this.renderFriends(data.friends)

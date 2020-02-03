@@ -28,7 +28,8 @@
             <button id="loadData">Load User Data</button>	
             <button id="displayData">Display User</button>
             <button id="saveUserPage">Save User Page</button>
-            <button id="displayUserPage">Load User Page</button>	
+            <button id="loadUserPage">Load User Page</button>
+            <select id="drop-down"></select>	
         </div>	
     </div>
 
@@ -64,6 +65,10 @@
             <p>About me:</p>
             <p>{{quote}}</p>
         </div>
+    </script>
+
+    <script id="dropDown-template" type="text/x-handlebars">
+        <option data-id="{{id}}">{{firstName}} {{lastName}}</option>
     </script>
 
 
