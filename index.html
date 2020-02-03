@@ -25,15 +25,35 @@
             </div>	
         </div>	
         <div class="buttons">	
-            <button>Load User Data</button>	
-            <button>Display User</button>	
+            <button id="loadData">Load User Data</button>	
+            <button id="displayUser">Display User</button>	
         </div>	
     </div>
 
     <script id="user-template" type="text/x-handlebars">
         <img id="profile-pic" src="{{profilePic}}">
         <p class="user-info">{{firstName}} {{lastName}}</p>
+        <p class="user-info">{{city}}, {{country}}</p>
+    </script>
 
+    <script id="friends-template" type="text/x-handlebars">
+        {{#each friend}}
+        <p class="friends">{{firstName}} {{lastName}}</p>
+        {{/each}}
+    </script>
+
+    <script id="quote-template" type="text/x-handlebars">
+        <p>Favorite Quote:</p> 
+        <span>{{quote}}<br>- Kanye West</span>
+    </script>
+
+    <script id="pokemon-template" type="text/x-handlebars">
+        <img id="pokemon-image" src="{{img}}">
+        <p id="pokemon-text">Favorite Pokemon: {{name}}</p>
+    </script>
+
+    <script id="aboutMe-template" type="text/x-handlebars">
+        <p class="meat-text">{{quote}}</p>
     </script>
 
 
