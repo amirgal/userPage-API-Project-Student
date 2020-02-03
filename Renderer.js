@@ -43,10 +43,10 @@ class Renderer {
         $('.meat-container').append(newHTML);
     }
 
-    renderDropDownMenu(userData) {
+    renderDropDownMenu(data) {
         const source = $('#dropDown-template').html()
         const template = Handlebars.compile(source)
-        const newHTML = template(userData);
+        const newHTML = template(data);
         $('#drop-down').append(newHTML);
     }
 
