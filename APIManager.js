@@ -73,11 +73,10 @@ class APIManager {
         })        
     }
 
-    getData() {
+    loadData() {
         this.getUsers()
         this.getQuote()
         this.getPokemon()
         this.getAboutMe()
-        return this.data
     }
 }

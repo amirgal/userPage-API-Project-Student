@@ -8,6 +8,7 @@ class Renderer {
         const source = $('#user-template').html()
         const template = Handlebars.compile(source)
         const newHTML = template(userData);
+        $('.user-container').empty();
         $('.user-container').append(newHTML);
     }
 
@@ -15,6 +16,7 @@ class Renderer {
         const source = $('#friends-template').html()
         const template = Handlebars.compile(source)
         const newHTML = template({friend: friendsData});
+        $('.friends-container').empty();
         $('.friends-container').append(newHTML);
     }
 
@@ -22,6 +24,7 @@ class Renderer {
         const source = $('#quote-template').html()
         const template = Handlebars.compile(source)
         const newHTML = template(quoteData);
+        $('.quote-container').empty();
         $('.quote-container').append(newHTML);
     }
 
@@ -29,6 +32,7 @@ class Renderer {
         const source = $('#pokemon-template').html()
         const template = Handlebars.compile(source)
         const newHTML = template(pokemonData);
+        $('.pokemon-container').empty();
         $('.pokemon-container').append(newHTML);
     }
 
@@ -36,6 +40,7 @@ class Renderer {
         const source = $('#aboutMe-template').html()
         const template = Handlebars.compile(source)
         const newHTML = template(aboutMeData);
+        $('.meat-container').empty();
         $('.meat-container').append(newHTML);
     }
 
