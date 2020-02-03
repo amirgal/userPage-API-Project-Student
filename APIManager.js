@@ -3,6 +3,7 @@
 class APIManager {
     constructor() {
         this.data = {}
+        this.id = 0
     }
     
     getUsers() {
@@ -11,6 +12,7 @@ class APIManager {
             url: `https://randomuser.me/api/?results=7`,
             success:  (data) => {                 
                 this.data.mainUser = {
+                    id : this.id,
                     firstName : data.results[0].name.first,
                     lastName : data.results[0].name.last,
                     city : data.results[0].location.city,
@@ -78,5 +80,6 @@ class APIManager {
         this.getQuote()
         this.getPokemon()
         this.getAboutMe()
+        this.id++
     }
 }

@@ -26,13 +26,15 @@
         </div>	
         <div class="buttons">	
             <button id="loadData">Load User Data</button>	
-            <button id="displayUser">Display User</button>	
+            <button id="displayData">Display User</button>
+            <button id="saveUserPage">Save User Page</button>
+            <button id="displayUserPage">Load User Page</button>	
         </div>	
     </div>
 
     <script id="user-template" type="text/x-handlebars">
         <img id="profile-pic" src="{{profilePic}}">
-        <div class="user-info">
+        <div class="user-info" data-id="{{id}}">
             <p class="user-info">{{firstName}} {{lastName}}</p>
             <br>
             <p class="user-info">{{city}}, {{country}}</p>
@@ -49,11 +51,11 @@
 
     <script id="quote-template" type="text/x-handlebars">
         <p>Favorite Quote:</p> 
-        <span>{{quote}}<br>- Kanye West</span>
+        <span>"{{quote}}"<br>- Kanye West</span>
     </script>
 
     <script id="pokemon-template" type="text/x-handlebars">
-        <img id="pokemon-image" src="{{img}}">
+        <img id="pokemon-image" src={{img}}>
         <p id="pokemon-text">Favorite Pokemon: {{name}}</p>
     </script>
 

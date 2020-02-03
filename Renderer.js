@@ -3,7 +3,6 @@ class Renderer {
     constructor(){
 
     }
-
     renderUser(userData) {
         const source = $('#user-template').html()
         const template = Handlebars.compile(source)
