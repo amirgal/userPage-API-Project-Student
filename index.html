@@ -29,6 +29,19 @@
             <button>Display User</button>	
         </div>	
     </div>
+
+    <script id="user-template" type="text/x-handlebars">
+        <img id="profile-pic" src="{{profilePic}}">
+        <p class="user-info">{{firstName}} {{lastName}}</p>
+
+    </script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="APIManager.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
