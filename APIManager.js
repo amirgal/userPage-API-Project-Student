@@ -1,4 +1,3 @@
-//This is the class that will manage all your APIs
 
 class APIManager {
     constructor() {
@@ -22,7 +21,8 @@ class APIManager {
                 data.results.slice(1).map(user => {
                     return {
                     firstName : user.name.first,
-                    lastName : user.name.last
+                    lastName : user.name.last,
+                    friendsPic: user.picture.thumbnail  
                     }
                 })
                 this.data.userId = this.id              
@@ -81,7 +81,6 @@ class APIManager {
         this.getPokemon()
         this.getAboutMe()
         this.id++
-        // localStorage.maxId = Math.max(this.id, localStorage.maxId) || this.id
         localStorage.maxId = this.id
     }
 }

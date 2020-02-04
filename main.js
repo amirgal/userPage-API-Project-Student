@@ -1,13 +1,15 @@
 const apiManager = new APIManager()
 const renderer = new Renderer()
+const data = apiManager.data 
 renderer.renderDropDownMenu(JSON.parse(localStorage.users || "{}"))
-const data = apiManager.data   //should i do without this and just do apiManager.data?
 
 $('#loadData').on('click', function() {
+    localStorage.lastUser = JSON.stringify(data)
     apiManager.loadData()
 })
 
-$('#displayData').on('click', function () {
+$('#displayData').on('click', function () { 
+    if($.isEmptyObject(data)){return}
     renderer.renderPage(data)
 })
 
@@ -19,7 +21,13 @@ $('#saveUserPage').on('click', function () {
     renderer.renderDropDownMenu({data})
 })
 
-$('#loadUserPage').on('click', function () {       //disable if no users saved? error
-    const userID = $('#drop-down').children("option:selected").data().id    
-    renderer.renderPage(JSON.parse(localStorage.users)[userID])
+$('#loadUserPage').on('click', function () {      
+    const userId = $('#drop-down').children("option:selected").data().id 
+    if(userId == undefined) {return}  
+    // localStorage.lastUser = JSON.stringify(JSON.parse(localStorage.users)[userId])
+    renderer.renderPage(JSON.parse(localStorage.users)[userId])
+})
+
+$('.user-container').on('click','#loadLastUser', function() {
+    renderer.renderPage(JSON.parse(localStorage.lastUser))
 })

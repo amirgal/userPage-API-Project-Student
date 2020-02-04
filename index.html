@@ -27,8 +27,8 @@
         <div class="buttons">	
             <button id="loadData">Load User Data</button>	
             <button id="displayData">Display User</button>
-            <button id="saveUserPage">Save User Page</button>
-            <button id="loadUserPage">Load User Page</button>
+            <button id="saveUserPage">Save To Favorites</button>
+            <button id="loadUserPage">Load From Favorites</button>
             <select id="drop-down" required>
                 <option value="" disabled selected hidden>Choose From Favorites...</option>
             </select>	
@@ -36,7 +36,7 @@
     </div>
 
     <script id="user-template" type="text/x-handlebars">
-        <i class="fas fa-chevron-circle-left"></i>
+        <i id="loadLastUser" class="fas fa-chevron-circle-left"></i>
         <img id="profile-pic" src="{{profilePic}}">
         <div class="user-info" data-id="{{id}}">
             <p class="user-info">{{firstName}} {{lastName}}</p>
@@ -48,7 +48,7 @@
     <script id="friends-template" type="text/x-handlebars">
         <ul>
             {{#each friend}}
-                <li>{{firstName}} {{lastName}}</li>
+                <li><img class="friends-pic" src="{{friendsPic}}"><p>{{firstName}} {{lastName}}</p></li>
             {{/each}}
         </ul>
     </script>
