@@ -8,12 +8,14 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 </head>
 
 <body>
     <div class="container">	
-        <div class="user-container"></div>	
+        <div class="user-container">
+            <!-- <i class="fas fa-arrow-alt-left"></i> -->
+        </div>	
         <div class="quote-container"></div>	
         <div class="content-container">	
             <div class="pokemon-container"></div>	
@@ -29,7 +31,9 @@
             <button id="displayData">Display User</button>
             <button id="saveUserPage">Save User Page</button>
             <button id="loadUserPage">Load User Page</button>
-            <select id="drop-down"></select>	
+            <select id="drop-down" required>
+                <option value="" disabled selected hidden>Choose From Favorites...</option>
+            </select>	
         </div>	
     </div>
 

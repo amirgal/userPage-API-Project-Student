@@ -3,7 +3,6 @@
 class APIManager {
     constructor() {
         this.data = {}
-        // this.id = Math.max(...Object.keys(JSON.parse(localStorage.users || '0')))
         this.id = localStorage.maxId || 0
     }
     
@@ -82,6 +81,7 @@ class APIManager {
         this.getPokemon()
         this.getAboutMe()
         this.id++
-        localStorage.maxId = Math.max(this.id, localStorage.maxId) || this.id
+        // localStorage.maxId = Math.max(this.id, localStorage.maxId) || this.id
+        localStorage.maxId = this.id
     }
 }
