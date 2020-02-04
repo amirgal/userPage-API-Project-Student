@@ -25,6 +25,8 @@ body {
     padding: 1vmax;
     box-shadow: 1px 1px 3px black;
     border-bottom-right-radius: 4px;
+    display: flex;
+    align-items: center;
 }
 
 .user-info {
@@ -129,4 +131,16 @@ button {
 .meat-text {
     padding: 1vw;
     font-size: 1vmax;
+}
+
+.fas {
+    color: white;
+    font-size: 50px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+button:hover{
+    box-shadow: 3px 3px 10px black;
+    background-color: rgb(18, 158, 18);
 }

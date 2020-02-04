@@ -8,14 +8,12 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 
 <body>
     <div class="container">	
-        <div class="user-container">
-            <!-- <i class="fas fa-arrow-alt-left"></i> -->
-        </div>	
+        <div class="user-container"></div>	
         <div class="quote-container"></div>	
         <div class="content-container">	
             <div class="pokemon-container"></div>	
@@ -38,6 +36,7 @@
     </div>
 
     <script id="user-template" type="text/x-handlebars">
+        <i class="fas fa-chevron-circle-left"></i>
         <img id="profile-pic" src="{{profilePic}}">
         <div class="user-info" data-id="{{id}}">
             <p class="user-info">{{firstName}} {{lastName}}</p>
