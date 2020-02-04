@@ -24,10 +24,11 @@ $('#saveUserPage').on('click', function () {
 $('#loadUserPage').on('click', function () {      
     const userId = $('#drop-down').children("option:selected").data().id 
     if(userId == undefined) {return}  
-    // localStorage.lastUser = JSON.stringify(JSON.parse(localStorage.users)[userId])
+    localStorage.lastUser = JSON.stringify(data)
     renderer.renderPage(JSON.parse(localStorage.users)[userId])
 })
 
 $('.user-container').on('click','#loadLastUser', function() {
     renderer.renderPage(JSON.parse(localStorage.lastUser))
+    // data = JSON.parse(localStorage.lastUser)
 })

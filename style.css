@@ -57,7 +57,8 @@ body {
 
 .quote-container>p {
     font-family: 'Nunito', sans-serif;
-    font-size: 1vmax;
+    font-size: 1.2vmax;
+    font-weight: bold;
 }
 
 .content-container {
@@ -84,9 +85,9 @@ ul {
 }
 
 li {
-    margin-top: 25px;
+    margin-top: 15px;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 5fr;
     align-items: center;
 }
 
@@ -134,7 +135,7 @@ button {
 
 .meat-text {
     padding: 1vw;
-    font-size: 1vmax;
+    font-size: 1.2vmax;
 }
 
 .fas {
