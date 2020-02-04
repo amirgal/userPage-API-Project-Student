@@ -81,7 +81,7 @@ class APIManager {
         this.getQuote()
         this.getPokemon()
         this.getAboutMe()
-        localStorage.maxId = Math.max(this.id, localStorage.maxId) || this.id
         this.id++
+        localStorage.maxId = Math.max(this.id, localStorage.maxId) || this.id
     }
 }

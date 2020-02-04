@@ -46,7 +46,7 @@ class Renderer {
     renderDropDownMenu(data) {
         const source = $('#dropDown-template').html()
         const template = Handlebars.compile(source)
-        const newHTML = template(data);
+        const newHTML = template({data});
         $('#drop-down').append(newHTML);
     }
 
@@ -59,3 +59,6 @@ class Renderer {
     }
 
 }
+
+
+

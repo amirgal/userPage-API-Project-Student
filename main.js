@@ -1,6 +1,6 @@
 const apiManager = new APIManager()
 const renderer = new Renderer()
-// renderer.renderDropDownMenu(localStorage.users)
+renderer.renderDropDownMenu(JSON.parse(localStorage.users || "{}"))
 let data = apiManager.data   //should i do without this and just do apiManager.data?
 
 $('#loadData').on('click', function() {
@@ -15,10 +15,10 @@ $('#saveUserPage').on('click', function () {
     const users = JSON.parse(localStorage.users || '{}')
     users[data.userId] = data
     localStorage.users = JSON.stringify(users)
-    renderer.renderDropDownMenu(data)
+    renderer.renderDropDownMenu({data})
 })
 
-$('#loadUserPage').on('click', function () {
-    const userID = $('#drop-down').children("option:selected").data().id
+$('#loadUserPage').on('click', function () {       //disable if no users saved? error
+    const userID = $('#drop-down').children("option:selected").data().id    
     renderer.renderPage(JSON.parse(localStorage.users)[userID])
 })

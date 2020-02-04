@@ -68,7 +68,9 @@
     </script>
 
     <script id="dropDown-template" type="text/x-handlebars">
-        <option data-id="{{userId}}">{{mainUser.firstName}} {{mainUser.lastName}}</option>
+        {{#each data}}
+            <option data-id="{{userId}}">{{mainUser.firstName}} {{mainUser.lastName}}</option>
+        {{/each}}
     </script>
 
 
