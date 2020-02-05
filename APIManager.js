@@ -1,4 +1,3 @@
-
 class APIManager {
     constructor() {
         this.data = {}
@@ -25,7 +24,8 @@ class APIManager {
                     friendsPic: user.picture.thumbnail  
                     }
                 })
-                this.data.userId = this.id              
+                this.data.userId = this.id 
+                localStorage.maxId = ++this.id             
             },
             error: function (xhr, text, error) {
                             console.log(text);
@@ -80,7 +80,5 @@ class APIManager {
         this.getQuote()
         this.getPokemon()
         this.getAboutMe()
-        this.id++
-        localStorage.maxId = this.id
     }
 }
